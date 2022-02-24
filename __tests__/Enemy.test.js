@@ -16,13 +16,13 @@ test('creates an enemy object', () => {
 });
 
 test('gets enemy health value', () => {
-    const enemy = new Enemy('Dave');
+    const enemy = new Enemy('goblin');
 
     expect(enemy.getHealth()).toEqual(expect.stringContaining(enemy.health.toString()));
 });
 
 test('checks if enemy health is greater than zero', () => {
-    const enemy = new Enemy('Dave');
+    const enemy = new Enemy('goblin');
 
     expect(enemy.isAlive()).toBeTruthy();
 
@@ -32,7 +32,7 @@ test('checks if enemy health is greater than zero', () => {
 });
 
 test('subtracts from enemy health', () => {
-    const enemy = new Enemy('Dave');
+    const enemy = new Enemy('goblin');
     const oldHealth = enemy.health;
 
     enemy.reduceHealth(5);
@@ -42,6 +42,14 @@ test('subtracts from enemy health', () => {
     enemy.reduceHealth(99999);
 
     expect(enemy.health).toBe(0);
+});
+
+test('gets enemy attack value', () => {
+    const enemy = new Enemy('goblin');
+    enemy.strength = 10;
+
+    expect(enemy.getAttackValue()).toBeGreaterThanOrEqual(5);
+    expect(enemy.getAttackValue()).toBeLessThanOrEqual(15);
 });
 
 test('gets a description of the enemy', () => {

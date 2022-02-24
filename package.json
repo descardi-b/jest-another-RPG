@@ -1,0 +1,22 @@
+{
+  "name": "jest-another-rpg",
+  "version": "1.0.0",
+  "description": "jest cli rpg",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/descardi-b/jest-another-RPG.git"
+  },
+  "author": "descardi-b",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/descardi-b/jest-another-RPG/issues"
+  },
+  "homepage": "https://github.com/descardi-b/jest-another-RPG#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
